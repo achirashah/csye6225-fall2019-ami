@@ -1,10 +1,14 @@
 # Folder of node js
 node_modules/
 
+# ami
+ami-vars-local.json
+
 # Folder of Teraforms
 terraform.tfstate
 terraform.tfstate.backup
 terraform.tfvars
+.terraform/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
