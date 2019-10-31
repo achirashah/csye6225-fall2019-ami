@@ -4,7 +4,7 @@
         "aws_secret_key": "",
         "aws_region": "",
         "subnet_id": "",
-        "source_ami": "",
+        "source_ami": "ami-9887c6e7",
         "ssh_username": "centos"
     },
     "builders": [
@@ -45,7 +45,6 @@
                 " mkdir ~/.npm-global",
                 " npm config set prefix '~/.npm-global'",
                 "npm install express",
-                "sudo yum update",
                 "sudo yum install wget -y" ,
                 "sudo yum install unzip -y",
                 "wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm" ,
@@ -54,7 +53,17 @@
                 "sudo yum install mysql-server -y",
                 "sudo systemctl start mysqld",
                 "sudo systemctl status mysqld",
-                "sudo systemctl disable mysqld"
+                "sudo systemctl disable mysqld",
+                "sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm", 
+                "sudo yum install ruby -y",
+                "cd /home/centos",
+                "wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto",
+                "sudo service codedeploy-agent status",
+                "sudo service codedeploy-agent start",
+                "wget https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm",
+                "sudo rpm -U ./amazon-cloudwatch-agent.rpm"
             ]
         }
     ]
