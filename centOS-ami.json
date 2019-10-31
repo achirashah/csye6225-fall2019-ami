@@ -56,6 +56,7 @@
                 "sudo systemctl status mysqld",
                 "sudo systemctl disable mysqld",
                 "sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm", 
+                "sudo yum install ruby -y",
                 "cd /home/centos",
                 "wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install",
                 "chmod +x ./install",
