@@ -12,7 +12,5 @@ ssh -i /home/arjun/.ssh/ centos@ec2-54-234-151-24.compute-1.amazonaws.com
 
 Copy web-app to centos ec2 instance
 scp -i /home/arjun/.ssh/ /home/arjun/Documents/devnew/ccwebapp/webapp.zip centos@ec2-54-234-151-24.compute-1.amazonaws.com:.
-
-Setup Mysql 
-
+Setup Mysql
 Run NPM start to start web app in webapp folder
