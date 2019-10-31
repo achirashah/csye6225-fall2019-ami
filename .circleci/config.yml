@@ -28,5 +28,4 @@ jobs:
                 -var 'aws_secret_key=${AWS_SECRET_KEY}' \
                 -var 'aws_region=${AWS_REGION}' \
                 -var 'subnet_id=REDACTED' \      
-                -var 'source_ami=${source_ami}' \      
                  centOS-ami.json
