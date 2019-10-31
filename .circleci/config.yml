@@ -23,8 +23,7 @@ jobs:
       - run:
           name: Build AM
           command: |
-            ./packer build \
-            -var "aws_region=${AWS_REGION}" \
-            -var "subnet_id=${AWS_SUBNET_ID}" \
-            centOS-ami.json
+            packer validate -var-file=./ami-vars-local.json centOS-ami.json
+            packer build -var-file=./ami-vars-local.json centOS-ami.json
+           
 
