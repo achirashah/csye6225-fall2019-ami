@@ -24,6 +24,7 @@ jobs:
           name: Build AM
           command: |
             ./packer build \
-                -var 'aws_region=${AWS_REGION}' \
-                -var 'subnet_id=REDACTED' \      
-                 centOS-ami.json
+            -var "aws_region=${AWS_REGION}" \
+            -var "subnet_id=${AWS_SUBNET_ID}" \
+            centOS-ami.json
+
