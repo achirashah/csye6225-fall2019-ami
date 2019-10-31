@@ -45,7 +45,6 @@
                 " mkdir ~/.npm-global",
                 " npm config set prefix '~/.npm-global'",
                 "npm install express",
-                "sudo yum update",
                 "sudo yum install wget -y" ,
                 "sudo yum install unzip -y",
                 "wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm" ,
