@@ -23,7 +23,10 @@ jobs:
       - run:
           name: Build AM
           command: |
-            packer validate -var-file=./ami-vars-local.json centOS-ami.json
-            packer build -var-file=./ami-vars-local.json centOS-ami.json
-           
-
+            ./packer build \
+                -var 'aws_access_key=${AWS_ACCESS_KEY}' \
+                -var 'aws_secret_key=${AWS_SECRET_KEY}' \
+                -var 'aws_region=${AWS_REGION}' \
+                -var 'subnet_id=REDACTED' \      
+                -var 'source_ami=${AWS_SOURCE_AMI}' \      
+                 centOS-ami.json
