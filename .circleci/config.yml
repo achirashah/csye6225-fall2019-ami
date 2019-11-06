@@ -18,7 +18,7 @@ jobs:
             unzip packer*.zip
             chmod +x packer
       - run:
-          name: Validate Packer Template
+          name: Validate Packer Templates
           command: ./packer validate centOS-ami.json
       - run:
           name: Build AM
